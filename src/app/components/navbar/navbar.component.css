@@ -1,0 +1,38 @@
+.navbar-inverse{
+    background-color: #e3660c;
+    border:none;
+    border-radius: 0px;
+    color:#fff;
+}
+.navAlign{
+    margin:1em auto;
+}
+.navFontLeft{
+    font-size: 1.3em;
+}
+.navFontRight{
+    font-size:1.25em;
+}
+span{
+    margin-left:1em;
+}
+a{
+    color:#fff;
+}
+header{overflow: hidden;
+    padding: 0px 0px 15px 0px;
+    position: relative;
+    width: 100%;
+
+}
+.header-top {
+    background: #e3660c;
+    padding: 3px 0 12px 0;
+}
+.header-bottom {
+    margin: 2.7em auto;
+    min-height:3em;
+}
+.btmNav{
+    min-height:5em;
+}
