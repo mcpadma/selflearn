@@ -12,28 +12,60 @@
       <div class = "col-lg-6 col-mg-6 navFontRight">
         <div class = "col-lg-6 col-md-6"></div>
         <div class = "col-lg-6 col-md-6">
-          <a href = "#">Login <i class = "glyphicon glyphicon-log-in"></i></a>
-          <span><a href = "#">Register <i class = "glyphicon glyphicon-user"></i></a></span>
+          <a (click)="openModal(template)">Login <i class = "glyphicon glyphicon-log-in"></i></a>
+          <span><a (click)="openModal(template1)">Register <i class = "glyphicon glyphicon-user"></i></a></span>
         </div>
       </div>
     </div>
   </nav>
   </div>
 <div class = "header-bottom">
-  <nav class = "navbar navbar-default btmNav">
-    
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+  <nav class = "navbar navbar-default navbar-fixed-top headerBottom">
+    <div class = "row btmNav">
+      <div class = "col-lg-4 col-md-4">
+        <div class = "col-lg-6 col-md-6"></div>
+        <div class = "col-lg-6 col-md-6">
+          <a class="navbar-brand" [routerLink] = "['/dashboard']">Comfy Travels</a>
+        </div>
+      </div>
+      <div class = "col-lg-8 col-md-8">
+        <div class = "col-lg-10 col-md-10">
+          <ul class="nav navbar-nav">
+            <li ><a [routerLink] = "['/dashboard']">HOME</a></li>
+            <li><a [routerLink] = "['/print']">PRINT TICKET</a></li>
+            <li><a [routerLink] = "['/cancel']">CANCEL TICKET</a></li>
+            <li><a [routerLink] = "['/edit']">EDIT TICKET</a></li>
+            <li><a [routerLink] = "['/contact']">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class = "col-lg-2 col-md-2"></div>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-
   </nav>
 </div>
 <header>
+  
+ <!--ngx-bootstrap modal popup code starts here-->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
+<ng-template #template1>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
+ <!-------------------------------------------->

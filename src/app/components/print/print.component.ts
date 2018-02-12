@@ -10,6 +10,7 @@ export class PrintComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("print works");
   }
 
 }
