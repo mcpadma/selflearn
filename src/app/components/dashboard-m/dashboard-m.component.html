@@ -1,4 +1,4 @@
-<div class ="row dashBgImg">
+<div class ="row dashBgImg" >
   <div class = "slider">
     <div class = "subSlider">
       <div class = "destForm">
@@ -53,15 +53,74 @@
     </div>
   </div>
 </div>
-<div class = "about">
+<div class = "aboutClass">
   <div class = "container">
     <div class = "row">
-      <div class = "col-lg-5 col-md-5">
+      <div class = "col-lg-4 col-md-4 imgDiv" [@scrollAnimation]="state" >
+        
+        <img src = "{{image}}" style="width:100%;height:100%;">
+        <!--<div>
+        <img src = "{{image}}" [@scrollAnimation]="state">
+        </div>-->
       </div>
-      <div class = "col-lg-7 col-md-7">
+      <div class = "col-lg-6 col-md-6" [@scrollAnimation1]="state" >
+        <h1 class = "about">About <span class = "aboutName">"comfy Travels"</span></h1>
+        <p>Comfy Travels is a fast growing diversified company that specialised in </p>
+        <ul >
+          <li *ngFor = "let spl of specials">{{spl}}</li>
+        </ul>
+        <p>The very DNA of the Group is Trust, Innovation, Professionalism, Competitiveness and Excellence
+                    in service to its clients Group's edge lies in presenting the world in the best possible way, that
+                    is Unique, Unexplored and Unhindered way - "Journeys of Joy"</p>
       </div>
     </div>
-    <div class = "row">
+    <div class = "row content" [@scrollAnimation2]="state">
+      <p>Bheemaneni Group is promoted by Mr. Bheemaneni Chittibabu, a young dynamic visionary and successful
+                businessman. He is a Civil Engineer , MBA post graduate by profession and is Group Chairman. His Vision
+                is to show the comfort while travelling to the travellers in the most fascinating way with innovative
+                comfort and create a new benchmark in the industry.</p>
+      <p>Bheemaneni Group's Vision is to be the worlds best travel company facilitating "Journeys of
+                Joy".</p>
+      <p>Every Journey of Bheemaneni includes an expert, full-time co-ordinator dedicated for their journey
+                of joy which is supported by customer care representatives &amp; comprehensive, user-friendly website which
+                provides all supports till a smooth take off for the journey with a happy landing.</p>
+      
     </div>
+  </div>
+</div>
+<div class = "features" >
+  <div class = "container">
+    <div class = "row" style="border:3px solid #e3660c; min-height:40vh;">
+      <div class ="col-lg-3 col-md-3 featureHead">
+        Features
+      </div>
+      <div class ="col-lg-9 col-md-9 featureList">
+        <div class ="row" >
+          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+            <img src = "{{icon1}}"/>
+            <div class = "figCaption">Comfort Journey</div>
+          </div>
+          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+            <img src = "{{icon2}}"/>
+            <div class = "figCaption">Live Tracking</div>
+          </div>
+        </div>
+        <div class ="row" >
+          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+            <img src = "{{icon3}}"/>
+            <div class = "figCaption">Safety & Trust</div>
+          </div>
+          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+            <img src = "{{icon4}}"/>
+            <div class = "figCaption">Hospitality</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class ="row routes">
+  <div class ="container popRoute">
+    <h1 class = "routeHead"> Popular Routes </h1> 
   </div>
 </div>

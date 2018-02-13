@@ -1,0 +1,7 @@
+.cancel{
+    background-color: #727576;
+}
+.cancelBody{
+    min-height:50vh;
+    /*border-bottom:5px solid #e3660c; */
+}

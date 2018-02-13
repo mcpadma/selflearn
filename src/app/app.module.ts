@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +16,7 @@ import { ContactComponent } from './components/contact/contact.component';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     PrintComponent,
     CancelComponent,
     EditComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot()
   ],

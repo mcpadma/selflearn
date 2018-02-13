@@ -1,0 +1,7 @@
+.print{
+    background-color: #727576;
+}
+.printBody{
+    min-height:50vh;
+    /*border-bottom:5px solid #e3660c; */
+}

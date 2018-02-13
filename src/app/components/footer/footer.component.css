@@ -1,0 +1,19 @@
+.footer{
+    margin:3em auto;
+}
+.footerTxt{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align:center;
+    font-size: 3em;
+    
+}
+.copyright{
+    background-color: #e3660c;
+    text-align:center;
+    font-size: 1em;
+    color:#fff;
+}
+.border{
+    border-top:5px solid #e3660c;
+}
