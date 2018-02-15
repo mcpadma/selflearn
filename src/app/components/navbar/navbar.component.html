@@ -1,71 +1,199 @@
 <header>
-<div class = "header-top">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="row navAlign">
-      <div class = "col-lg-6 col-mg-6 navFontLeft">
-        <div class = "col-lg-4 col-md-4"></div>
-        <div class = "col-lg-6 col-md-6">
-          <i class = "glyphicon glyphicon-earphone"></i>
-          - 1234567890, 0987654321
+  <div class = "header-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="row navAlign">
+        <div class = "col-lg-6 col-md-6 col-sm-6 navFontLeft">
+          <div class = "col-lg-4 col-md-4 col-sm-2">
+          </div>
+          <div class = "col-lg-6 col-md-6 col-sm-8">
+            <i class = "glyphicon glyphicon-earphone">
+            </i>
+            - 1234567890, 0987654321
+          </div>
+        </div>
+        <div class = "col-lg-6 col-mg-6 col-sm-6navFontRight">
+          <div class = "col-lg-6 col-md-6 col-sm-6">
+          </div>
+          <div class = "col-lg-6 col-md-6 col-sm-6">
+            <a (click)="openModal(template)">Login 
+              <i class = "glyphicon glyphicon-log-in">
+              </i>
+            </a>
+            <span>
+              <a (click)="openModal(template1)">Register 
+                <i class = "glyphicon glyphicon-user">
+                </i>
+              </a>
+            </span>
+          </div>
         </div>
       </div>
-      <div class = "col-lg-6 col-mg-6 navFontRight">
-        <div class = "col-lg-6 col-md-6"></div>
-        <div class = "col-lg-6 col-md-6">
-          <a (click)="openModal(template)">Login <i class = "glyphicon glyphicon-log-in"></i></a>
-          <span><a (click)="openModal(template1)">Register <i class = "glyphicon glyphicon-user"></i></a></span>
+    </nav>
+  </div>
+  <div class = "header-bottom">
+    <nav class = "navbar navbar-default navbar-fixed-top headerBottom">
+      <div class = "row btmNav">
+        <div class = "col-lg-4 col-md-4 col-sm-3">
+          <div class = "col-lg-6 col-md-6 col-sm-6">
+          </div>
+          <div class = "col-lg-6 col-md-6 col-sm-6">
+            <a class="navbar-brand" [routerLink] = "['/dashboard']">Comfy Travels
+            </a>
+          </div>
+        </div>
+        <div class = "col-lg-8 col-md-8 col-sm-8">
+          <div class = "col-lg-10 col-md-10 col-sm-10">
+            <ul class="nav navbar-nav">
+              <li >
+                <a [routerLink] = "['/dashboard']">HOME
+                </a>
+              </li>
+              <li>
+                <a [routerLink] = "['/print']">PRINT TICKET
+                </a>
+              </li>
+              <li>
+                <a [routerLink] = "['/cancel']">CANCEL TICKET
+                </a>
+              </li>
+              <li>
+                <a [routerLink] = "['/edit']">EDIT TICKET
+                </a>
+              </li>
+              <li>
+                <a [routerLink] = "['/contact']">CONTACT US
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class = "col-lg-2 col-md-2 col-sm-2">
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   </div>
-<div class = "header-bottom">
-  <nav class = "navbar navbar-default navbar-fixed-top headerBottom">
-    <div class = "row btmNav">
-      <div class = "col-lg-4 col-md-4">
-        <div class = "col-lg-6 col-md-6"></div>
-        <div class = "col-lg-6 col-md-6">
-          <a class="navbar-brand" [routerLink] = "['/dashboard']">Comfy Travels</a>
+  <header>
+    <!--ngx-bootstrap modal popup code starts here-->
+    <ng-template #template style="margin:20em auto;">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Login
+        </h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #form = "ngForm">
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="userId">First Name</label>-->
+            <input id="userId" type="text" class = "form-control" 
+                   name = "userName" 
+                   [(ngModel)]="userName" 
+                   placeholder="Email or Username">
+            <span>
+              <i class ="glyphicon glyphicon-user">
+              </i>
+            </span>
+          </div>
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="userId">First Name</label>-->
+            <input id="pwd" type="text" class = "form-control" 
+                   name = "passWord" 
+                   [(ngModel)]="passWord" 
+                   placeholder="Password">
+            <span>
+              <i class ="glyphicon glyphicon-lock">
+              </i>
+            </span>
+          </div>
+          <div class="form-group"> 
+            <button class = "btn btn-lg btn-success form-control" type="submit" value="submit">Login
+            </button>
+          </div>
+        </form>
+        <div class ="row ">
+          <div class ="col-lg-6 col-md-6 col-sm-6">
+            <a  class = "pwdTxt">Lost your password?
+            </a>
+          </div>
+          <div class ="col-lg-6 col-md-6 col-sm-6" style="text-align:right;">
+            <a  (click)="openModal(template1)" class = "pwdTxt">New User
+            </a>
+          </div>
         </div>
       </div>
-      <div class = "col-lg-8 col-md-8">
-        <div class = "col-lg-10 col-md-10">
-          <ul class="nav navbar-nav">
-            <li ><a [routerLink] = "['/dashboard']">HOME</a></li>
-            <li><a [routerLink] = "['/print']">PRINT TICKET</a></li>
-            <li><a [routerLink] = "['/cancel']">CANCEL TICKET</a></li>
-            <li><a [routerLink] = "['/edit']">EDIT TICKET</a></li>
-            <li><a [routerLink] = "['/contact']">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class = "col-lg-2 col-md-2"></div>
+    </ng-template>
+
+
+    <ng-template #template1>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Register
+        </h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;
+          </span>
+        </button>
       </div>
-    </div>
-  </nav>
-</div>
-<header>
-  
- <!--ngx-bootstrap modal popup code starts here-->
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    This is a modal.
-  </div>
-</ng-template>
-<ng-template #template1>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    This is a modal.
-  </div>
-</ng-template>
- <!-------------------------------------------->
+      <div class="modal-body">
+        <form #form = "ngForm">
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="userName">First Name</label>-->
+            <input id="userName" type="text" class = "form-control" 
+                   name = "name" 
+                   [(ngModel)]="name" 
+                   placeholder="Name">
+            <span>
+              <i class ="glyphicon glyphicon-user">
+              </i>
+            </span>
+          </div>
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="email">First Name</label>-->
+            <input id="email" type="text" class = "form-control" 
+                   name = "emailId" 
+                   [(ngModel)]="emailId" 
+                   placeholder="Email">
+            <span>
+              <i class ="glyphicon glyphicon-envelope">
+              </i>
+            </span>
+          </div>
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="userId">First Name</label>-->
+            <input id="pwd" type="text" class = "form-control" 
+                   name = "passWord" 
+                   [(ngModel)]="passWord" 
+                   placeholder="Password">
+            <span>
+              <i class ="glyphicon glyphicon-lock">
+              </i>
+            </span>
+          </div>
+          <div class="form-group inner-addon right-addon">
+            <!--<label for="mob">First Name</label>-->
+            <input id="mob" type="text" class = "form-control" 
+                   name = "mobNo" 
+                   [(ngModel)]="mobNo" 
+                   placeholder="Mobile">
+            <span>
+              <i class ="glyphicon glyphicon-earphone">
+              </i>
+            </span>
+          </div>
+          <div class="form-group"> 
+            <button class = "btn btn-lg btn-success form-control" type="submit" value="submit">Register
+            </button>
+          </div>
+        </form>
+        <div class ="row ">
+          <div class ="col-lg-6 col-md-6 col-sm-6">
+          </div>
+          <div class ="col-lg-6 col-md-6 col-sm-6" style="text-align:right;" >
+            <a (click)="openModal(template)" class = "pwdTxt" >Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <!-------------------------------------------->

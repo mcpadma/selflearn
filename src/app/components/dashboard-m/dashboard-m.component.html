@@ -7,7 +7,7 @@
           </h3>
           <form #form = "ngForm">
             <div class = "row">
-              <div class="form-group col-lg-12 col-md-12" >
+              <div class="form-group col-lg-12 col-md-12 col-sm-12" >
                 <select id="lang" #primaryLang >
                   <option value = "default">Select Origin
                   </option>
@@ -15,7 +15,7 @@
                   </option>
                 </select>
               </div>
-              <div class="form-group col-lg-12 col-md-12" >
+              <div class="form-group col-lg-12 col-md-12 col-sm-12" >
                 <select id="lang" #primaryLang >
                   <option value = "default">Select Origin
                   </option>
@@ -23,7 +23,7 @@
                   </option>
                 </select>
               </div>
-              <div class="form-group col-lg-12 col-md-12 calendar" >
+              <div class="form-group col-lg-12 col-md-12 col-sm-12 calendar" >
                 <input id="datePicker" name="datePicker"
                        placeholder="Journey Date"
                        ngModel
@@ -33,7 +33,7 @@
                        [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
                        [bsConfig]="bsConfig">
               </div>
-              <div class="form-group col-lg-12 col-md-12 calendar" >
+              <div class="form-group col-lg-12 col-md-12 col-sm-12 calendar" >
                 <input id="datePicker1"  name="datePicker"
                        placeholder="Return Date (Optional)"
                        ngModel
@@ -56,14 +56,14 @@
 <div class = "aboutClass">
   <div class = "container">
     <div class = "row">
-      <div class = "col-lg-4 col-md-4 imgDiv" [@scrollAnimation]="state" >
+      <div class = "col-lg-4 col-md-4 col-sm-4 imgDiv" [@scrollAnimation]="state" >
         
         <img src = "{{image}}" style="width:100%;height:100%;">
         <!--<div>
         <img src = "{{image}}" [@scrollAnimation]="state">
         </div>-->
       </div>
-      <div class = "col-lg-6 col-md-6" [@scrollAnimation1]="state" >
+      <div class = "col-lg-6 col-md-6 col-sm-6" [@scrollAnimation1]="state" >
         <h1 class = "about">About <span class = "aboutName">"comfy Travels"</span></h1>
         <p>Comfy Travels is a fast growing diversified company that specialised in </p>
         <ul >
@@ -91,26 +91,26 @@
 <div class = "features" >
   <div class = "container">
     <div class = "row" style="border:3px solid #e3660c; min-height:40vh;">
-      <div class ="col-lg-3 col-md-3 featureHead">
+      <div class ="col-lg-3 col-md-3 col-sm-3 featureHead">
         Features
       </div>
-      <div class ="col-lg-9 col-md-9 featureList">
+      <div class ="col-lg-9 col-md-9 col-sm-9 featureList">
         <div class ="row" >
-          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+          <div class =" col-lg-6 col-md-6 col-sm-6" style="text-align:  center;margin: 5em auto;">
             <img src = "{{icon1}}"/>
             <div class = "figCaption">Comfort Journey</div>
           </div>
-          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+          <div class =" col-lg-6 col-md-6 col-sm-6" style="text-align:  center;margin: 5em auto;">
             <img src = "{{icon2}}"/>
             <div class = "figCaption">Live Tracking</div>
           </div>
         </div>
         <div class ="row" >
-          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+          <div class =" col-lg-6 col-md-6 col-sm-6" style="text-align:  center;margin: 5em auto;">
             <img src = "{{icon3}}"/>
             <div class = "figCaption">Safety & Trust</div>
           </div>
-          <div class =" col-lg-6 col-md-6" style="text-align:  center;margin: 5em auto;">
+          <div class =" col-lg-6 col-md-6 col-sm-6" style="text-align:  center;margin: 5em auto;">
             <img src = "{{icon4}}"/>
             <div class = "figCaption">Hospitality</div>
           </div>

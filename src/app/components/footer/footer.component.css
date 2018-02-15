@@ -13,6 +13,7 @@
     text-align:center;
     font-size: 1em;
     color:#fff;
+    min-height: 5vh;
 }
 .border{
     border-top:5px solid #e3660c;

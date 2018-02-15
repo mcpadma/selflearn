@@ -10,11 +10,13 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 export class NavbarComponent implements OnInit {
 
    modalRef: BsModalRef;
-
+   
+   userName:any;
   constructor(private modalService: BsModalService) { }
 
   openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
+    this.modalRef = this.modalService.show(template, {class: 'modal-md'});
+    
   }
   
   ngOnInit() {
