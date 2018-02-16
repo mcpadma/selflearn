@@ -3,5 +3,22 @@
 }
 .cancelBody{
     min-height:50vh;
+    margin:2em auto;
     /*border-bottom:5px solid #e3660c; */
+}
+.fitLabel{
+    margin-bottom:1em;
+}
+.cancelBtn{
+    text-align: center;
+    margin-top: 1em;
+}
+.btn-primary{
+    background-color: #011b32;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+}
+.btn-primary:hover{
+    background-color: #226dbf;
 }

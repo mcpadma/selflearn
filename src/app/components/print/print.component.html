@@ -5,6 +5,17 @@
 </div>
 <div class = "row">
   <div class ="container printBody">
-
+    <div class = "row">
+      <label for="lastId">PNR Number :</label>
+      <span>
+        <input id="lastId" type="text"   
+        name = "lastName" [(ngModel)]="model.lastName">
+      </span>
+      <span>
+        <button class = "btn btn-md btn-primary" type="submit" value="submit">Print Ticket</button>
+        <button class = "btn btn-md btn-primary" type="submit" value="submit">Send SMS</button>
+      </span>
+      <p style = "margin:1em auto;">Enter your PNR number to get ticket details to print and send SMS.</p>
+    </div>
   </div>
 </div>

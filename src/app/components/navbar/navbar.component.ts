@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef  } from '@angular/core';
+
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
@@ -14,7 +15,7 @@ export class NavbarComponent implements OnInit {
    config = {
 
 backdrop: false,
-ignoreBackdropClick: false
+ignoreBackdropClick: true
 };
    userName:any;
   constructor(private modalService: BsModalService) { }
