@@ -4,6 +4,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
+import { Data } from '../../data';
+import { DatasService } from '../../datas.service';
+
 @Component({
   selector: 'app-dashboard-m',
   templateUrl: './dashboard-m.component.html',
@@ -68,7 +71,9 @@ export class DashboardMComponent implements OnInit {
   icon4:any;  
   state = 'hide'
 
-  constructor(public el: ElementRef) { 
+  datas: Array<Data>;
+
+  constructor(public el: ElementRef,private dataService: DatasService) { 
     this.minDate = new Date();
     
     this.minDate.setDate(this.minDate.getDate() );
@@ -96,6 +101,10 @@ export class DashboardMComponent implements OnInit {
     this.icon2 = "../../../assets/icon5.png";
     this.icon3 = "../../../assets/icon6.png";
     this.icon4 = "../../../assets/icon7.png";
+    this.dataService.getDatas()
+      .subscribe(resData => this.datas = resData);
   }
+
+
 
 }

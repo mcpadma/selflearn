@@ -17,6 +17,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FooterComponent } from './components/footer/footer.component';
+import { DatasService } from './datas.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot()
   ],
-  providers: [],
+  providers: [DatasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
