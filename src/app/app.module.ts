@@ -19,6 +19,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FooterComponent } from './components/footer/footer.component';
 import { DatasService } from './datas.service';
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,7 @@ import { DatasService } from './datas.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+     HttpModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot()
