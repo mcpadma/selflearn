@@ -71,7 +71,7 @@ export class DashboardMComponent implements OnInit {
   icon4:any;  
   state = 'hide'
 
-  datas: Array<Data>;
+  // datas: Array<Data>;
 
   constructor(public el: ElementRef,private dataService: DatasService) { 
     this.minDate = new Date();
@@ -101,8 +101,8 @@ export class DashboardMComponent implements OnInit {
     this.icon2 = "../../../assets/icon5.png";
     this.icon3 = "../../../assets/icon6.png";
     this.icon4 = "../../../assets/icon7.png";
-    this.dataService.getDatas()
-      .subscribe(resData => this.datas = resData);
+    // this.dataService.getDatas()
+    //   .subscribe(resData => this.datas = resData);
   }
 
 
