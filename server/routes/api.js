@@ -6,8 +6,13 @@ const router = express.Router();
 // });
 const mongoose = require('mongoose');
 const data = require('../models/data');
+// const userdata = require('../models/users');
 
-const db = "mongodb://test:test@ds239128.mlab.com:39128/selflearn";
+//using remote mongodb
+// const db = "mongodb://test:test@ds239128.mlab.com:39128/selflearn";
+//using local mongodb
+const db = "mongodb://localhost/selflearn";
+
 mongoose.Promise = global.Promise;//to avoid any warnings thrown by mongoose
 
 mongoose.connect(db,function(err){
@@ -15,6 +20,8 @@ mongoose.connect(db,function(err){
         console.log("Error" +err);
     }
 });
+
+
 
 router.get('/datas',function(req,res){
     console.log('get request for all datas');
@@ -83,5 +90,9 @@ router.delete('/data/:id',function(req,res){
         }
     });
 });
+
+
+
+
 
 module.exports = router;

@@ -87,7 +87,7 @@ export class DashboardMComponent implements OnInit {
       const componentPosition = this.el.nativeElement.offsetTop
       const scrollPosition = window.pageYOffset
 
-      if (scrollPosition >= componentPosition) {
+      if (scrollPosition <= componentPosition) {
         this.state = 'show'
       } 
       // else {
@@ -103,6 +103,8 @@ export class DashboardMComponent implements OnInit {
     this.icon4 = "../../../assets/icon7.png";
     this.dataService.getDatas()
       .subscribe(resData => this.datas = resData);
+
+      
   }
 
 

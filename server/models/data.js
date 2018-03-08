@@ -10,4 +10,5 @@ const dataSchema = new Schema({
 });
 
 
+
 module.exports = mongoose.model('data', dataSchema, 'data');
